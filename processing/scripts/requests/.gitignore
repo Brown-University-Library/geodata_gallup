@@ -3,4 +3,4 @@
 
 # Except the test folder
 !.gitignore
-!test/
+!/test/
