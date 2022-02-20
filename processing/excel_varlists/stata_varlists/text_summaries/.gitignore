@@ -1,0 +1,6 @@
+# Ignore all summary output
+*
+
+# Except README
+!.gitignore
+!README.txt
