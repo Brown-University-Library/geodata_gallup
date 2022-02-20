@@ -1,6 +1,0 @@
-# Ignore all request folders
-*
-
-# Except the test folder
-!test/
-!.gitignore
