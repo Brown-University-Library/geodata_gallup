@@ -1,0 +1,6 @@
+# Ignore all source data
+*
+
+# Except the readme
+!.gitignore
+!README.txt

@@ -1,0 +1,57 @@
+                                                       ___  ____  ____  ____  ____(R)
+                                                      /__    /   ____/   /   ____/   
+                                                     ___/   /   /___/   /   /___/    
+                                                       Statistics/Data analysis      
+      
+      
+        ___  ____  ____  ____  ____ ©
+       /__    /   ____/   /   ____/      17.0
+      ___/   /   /___/   /   /___/       SE—Standard Edition
+      
+       Statistics and Data Science       Copyright 1985-2021 StataCorp LLC
+                                         StataCorp
+                                         4905 Lakeway Drive
+                                         College Station, Texas 77845 USA
+                                         800-STATA-PC        https://www.stata.com
+                                         979-696-4600        stata@stata.com
+      
+      Stata license: 120-user network perpetual
+      Serial number: 401706301395
+        Licensed to: Brown University
+                     Brown University
+      
+      Notes:
+            1. Unicode is supported; see help unicode_advice.
+            2. Maximum number of variables is set to 5,000; see help set_maxvar.
+            3. New update available; type -update all-
+      
+     1 . cd "C:\Users\fdonnell\Documents\stata_varlists"
+      C:\Users\fdonnell\Documents\stata_varlists
+      
+     2 . use "C:\gallup\US Tracker Poll Datasets and Methodology\US Tracker Poll Datasets and Methodology\US Tracker STATA Files_2008-2017\US T
+      > racker STATA Files_2008-2017\US_DAILY_2008_DATA.dta"
+      
+     3 . do "C:\gallup\a_excel_varlists\us_tracker.do"
+      
+     4 . * Create variable list for Gallup US Tracker Survey 2008-2017
+     5 . 
+     6 . local y = YEAR in 1
+      
+     7 . 
+     8 . describe,short
+      
+      Contains data from C:\gallup\US Tracker Poll Datasets and Methodology\US Tracker Poll Datasets and Methodology\US Tracker STATA Files_20
+      > 08-2017\US Tracker STATA Files_2008-2017\US_DAILY_2008_DATA.dta
+       Observations:       355,334                  
+          Variables:           142                  27 OCT 2017 10:38
+      Sorted by: 
+      
+     9 . summarize YEAR
+      
+          Variable |        Obs        Mean    Std. dev.       Min        Max
+      -------------+---------------------------------------------------------
+              YEAR |    355,334        2008           0       2008       2008
+      
+    10 . 
+    11 . translate @Results gallup_tracker_`y'_summary.txt, replace
+      (file gallup_tracker_2008_summary.txt not found)

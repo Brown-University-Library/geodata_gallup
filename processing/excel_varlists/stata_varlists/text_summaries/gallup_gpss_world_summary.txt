@@ -1,0 +1,34 @@
+                                                       ___  ____  ____  ____  ____(R)
+                                                      /__    /   ____/   /   ____/   
+                                                     ___/   /   /___/   /   /___/    
+                                                       Statistics/Data analysis      
+      
+      
+     1 . use "C:\gallup\Gallup GPSS Polling Series\Gallup GPSS Polling Series\GPSS -- 02 Feb World Affairs - 2021\GPSS World Affairs Final GA A
+      > ggregate.dta"
+      
+     2 . do "C:\gallup\a_excel_varlists\gpss_poll.do"
+      
+     3 . * Create variable list for Gallup GPSS
+     4 . 
+     5 . display "Enter the name of the GPSS survey (mood,world,environment,etc): " _request(s)
+      Enter the name of the GPSS survey (mood,world,environment,etc): . world
+      
+     6 . 
+     7 . describe,short
+      
+      Contains data from C:\gallup\Gallup GPSS Polling Series\Gallup GPSS Polling Series\GPSS -- 02 Feb World Affairs - 2021\GPSS World Affair
+      > s Final GA Aggregate.dta
+       Observations:        22,183                  
+          Variables:           430                  27 Oct 2021 15:44
+      Sorted by: 
+      
+     8 . 
+     9 . summarize yr
+      
+          Variable |        Obs        Mean    Std. dev.       Min        Max
+      -------------+---------------------------------------------------------
+                yr |     22,183    2010.515    6.355957       2000       2021
+      
+    10 . 
+    11 . translate @Results gallup_gpss_${s}_summary.txt, replace

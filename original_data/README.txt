@@ -1,0 +1,1 @@
+This folder contains the original input data from Gallup, in subfolders named for the dataset

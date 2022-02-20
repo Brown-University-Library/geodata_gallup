@@ -1,0 +1,34 @@
+                                                       ___  ____  ____  ____  ____(R)
+                                                      /__    /   ____/   /   ____/   
+                                                     ___/   /   /___/   /   /___/    
+                                                       Statistics/Data analysis      
+      
+      
+     1 . use "C:\gallup\Gallup GPSS Polling Series\Gallup GPSS Polling Series\GPSS -- 10 Oct Crime - 2020\GPSS Crime Final GA Aggregate.dta"
+      
+     2 . do "C:\gallup\a_excel_varlists\gpss_poll.do"
+      
+     3 . * Create variable list for Gallup GPSS
+     4 . 
+     5 . display "Enter the name of the GPSS survey (mood,world,environment,etc): " _request(s)
+      Enter the name of the GPSS survey (mood,world,environment,etc): . crime
+      
+     6 . 
+     7 . describe,short
+      
+      Contains data from C:\gallup\Gallup GPSS Polling Series\Gallup GPSS Polling Series\GPSS -- 10 Oct Crime - 2020\GPSS Crime Final GA Aggre
+      > gate.dta
+       Observations:        21,854                  
+          Variables:           309                  18 DEC 2020 08:41
+      Sorted by: 
+      
+     8 . 
+     9 . summarize yr
+      
+          Variable |        Obs        Mean    Std. dev.       Min        Max
+      -------------+---------------------------------------------------------
+                yr |     21,854    2010.242    6.136946       2000       2020
+      
+    10 . 
+    11 . translate @Results gallup_gpss_${s}_summary.txt, replace
+      (file gallup_gpss_crime_summary.txt not found)

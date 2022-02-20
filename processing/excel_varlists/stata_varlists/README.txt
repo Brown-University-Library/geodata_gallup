@@ -1,0 +1,1 @@
+This folder contains outputs for all Gallup variable spreadsheets

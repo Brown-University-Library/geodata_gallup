@@ -1,0 +1,35 @@
+                                                       ___  ____  ____  ____  ____(R)
+                                                      /__    /   ____/   /   ____/   
+                                                     ___/   /   /___/   /   /___/    
+                                                       Statistics/Data analysis      
+      
+      
+     1 . use "C:\gallup\Gallup GPSS Polling Series\Gallup GPSS Polling Series\GPSS -- 04 Apr Economy and Personal Finance - 2021\GPSS Economy a
+      > nd Finance Final GA Aggregate.dta"
+      
+     2 . do "C:\gallup\a_excel_varlists\gpss_poll.do"
+      
+     3 . * Create variable list for Gallup GPSS
+     4 . 
+     5 . display "Enter the name of the GPSS survey (mood,world,environment,etc): " _request(s)
+      Enter the name of the GPSS survey (mood,world,environment,etc): . economy
+      
+     6 . 
+     7 . describe,short
+      
+      Contains data from C:\gallup\Gallup GPSS Polling Series\Gallup GPSS Polling Series\GPSS -- 04 Apr Economy and Personal Finance - 2021\GP
+      > SS Economy and Finance Final GA Aggregate.dta
+       Observations:        22,341                  
+          Variables:           316                  22 JUN 2021 17:26
+      Sorted by: 
+      
+     8 . 
+     9 . summarize yr
+      
+          Variable |        Obs        Mean    Std. dev.       Min        Max
+      -------------+---------------------------------------------------------
+                yr |     22,341     2011.07     5.90888       2001       2021
+      
+    10 . 
+    11 . translate @Results gallup_gpss_${s}_summary.txt, replace
+      (file gallup_gpss_economy_summary.txt not found)
